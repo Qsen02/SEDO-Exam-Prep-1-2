@@ -7,7 +7,9 @@ pipeline{
             }
         }
         stage("Test"){
-            bat "dotnet test"
+            steps{
+                bat "dotnet test"
+            }
         }
     }
     post{
